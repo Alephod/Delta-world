@@ -1,0 +1,53 @@
+.header {
+    z-index: 99;
+    background: #fff;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #bfbfbf;
+
+    &_theme_dark {
+        background: #000;
+        border-bottom: 1px solid #252525;
+        .header__link:hover {
+            background: #181818;
+        }
+    }
+
+    &__container {
+        height: 55px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
+    &__main {
+        display: flex;
+        height: 100%;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        transition: 0.5s;
+        height: 100%;
+        padding: 0 15px;
+        &:hover {
+            background: #fcfcfc;
+        }
+        @media screen and (max-width: 510px) {
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+        i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        span {
+            font-size: 16px;
+        }
+    }
+
+}

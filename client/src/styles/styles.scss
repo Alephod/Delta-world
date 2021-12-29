@@ -1,0 +1,125 @@
+@import "./vars.scss";
+
+// Обнуление стилей
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+button,
+input[type="submit"],
+input[type="button"] {
+	cursor: pointer;
+	font-family: inherit;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: inherit !important;
+}
+a:hover {
+	text-decoration: none;
+	color: inherit !important;
+}
+ul,
+li,
+ol {
+	list-style-type: none;
+}
+img {
+	vertical-align: top;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color: inherit;
+	background-color: transparent;
+	transition: background-color 9999999999999999s ease-in-out 0s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+// Cтили по умолчанию
+body {
+	min-height: 100vh;
+	overflow-x: hidden;
+	background-color: #f2f2f2 !important;
+	color: #000;
+	font-family: sans-serif;
+
+	&.body_theme_dark {
+	    background-color: #141414 !important;
+	    color: #fff !important;
+	}
+	&.body_modal_opened {
+		overflow-y: hidden !important;
+	}
+}
+#root {
+	min-height: 100vh;
+}
+.body {
+	position: relative;
+	display: grid;
+	min-height: 100vh;
+}
+main {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+}
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: $container;
+}

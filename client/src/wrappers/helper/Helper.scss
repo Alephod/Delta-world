@@ -1,0 +1,19 @@
+.helper {
+    position: relative;
+    display: inline-flex;
+    &_theme_dark {
+        .helper__comment {
+            background: #141414;
+            border: 1px solid #4f4f4f;
+        }
+    }
+
+    &__comment {
+        position: absolute;
+        top: -0.5em;
+        padding: 2px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+}

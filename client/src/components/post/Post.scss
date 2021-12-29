@@ -1,0 +1,125 @@
+.post {
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_theme_dark {
+        .post__contanier {
+            background: #141414;
+        }
+        a {
+            color: #fff !important;
+        }
+    }
+
+    a {
+        color: #000;
+    }
+
+    &__close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @media screen and (max-width: 710px) {
+            top: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        span {
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background: #cacaca;
+            &:first-child {
+                transform: rotateZ(45deg);
+            }
+            &:last-child {
+                transform: rotateZ(-45deg);
+            }
+        }
+    }
+    &__contanier {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 600px;
+        min-height: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+        background: #f2f2f2;
+        border-radius: 20px;
+        border: 1px solid #4a4a4a;
+        padding: 15px;
+    }
+    .loader {
+        align-self: center;
+        &__inner {
+            background: #f2f2f2;
+        }
+    }
+    &__inner {
+        height: 100%;
+        width: 100%;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &__author {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    &__author-img {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+    }
+    .helper__comment {
+        top: -1.5em;
+    }
+    &__author-name {
+        margin: 0;
+        font-size: 16px;
+    }
+    &__date {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+    &__img {
+        border-radius: 20px;
+        width: 100%;
+        height: 380px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            border-radius: 20px;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}
